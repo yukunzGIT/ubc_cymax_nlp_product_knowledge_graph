@@ -1,0 +1,6 @@
+,Item_1_ProductID,Item_1_Title,Item_2_ProductID,Item_2_Title,No_NER_Baseline_Score,All_Features_ANNOY_Score,NER_only_ANNOY_Score
+0,2181013,"Plutus 18"" x 18"" Stripe Luxury Throw Pillow in Multi-Color",2181012,"Plutus 16"" x 16"" Stripe Luxury Throw Pillow in Multi-Color",0.95,0.99,1.0
+3,478571,Soho Round Rug in Blue / Multi,478572,Soho Square Rug in Blue / Multi,0.93,0.84,0.84
+5,1600725,Monaco 9' X 12' Rug in Gray,1600724,Monaco 8' X 11' Rug in Gray,0.89,0.97,1.0
+12,1955018,"30"" X-Sided Plant Stand",1955019,"24"" X-Sided Plant Stand",0.85,0.99,1.0
+16,1639641,Oceanside 9' Black Market Umbrella in Canvas,1639585,Oceanside 9' Black Market Umbrella in Yellow,0.84,0.99,1.0

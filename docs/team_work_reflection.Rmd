@@ -1,0 +1,120 @@
+---
+title: "Team Work Reflection"
+output: pdf_document
+---
+
+The team work reflection deliverable is an *individual* report intended to give you an avenue to present your viewpoint as to how the project went, how the group worked together, and your role in the group. Each group member must complete this form to report on the contributions of **yourself** and the other group members. That information can, if needed, be used to adjust final grades of individuals using the [project contribution multiplier](https://github.com/UBC-MDS/public/blob/master/rubric/rubric_multiplier.md). This is a private, individual report, meaning that none of your group members will see this report.
+
+## 1. General teamwork evaluation
+
+Evaluate each member of your group by writing the number that best reflects the extent to which he/she participated, prepared, helped the group excel, and was a team player using the following ratings:
+
+| Rating |               Description               |
+| :----: | :-------------------------------------: |
+|   4    |     Usually (over 90% of the time)      |
+|   3    |    Frequently (more often than not)     |
+|   2    |   Sometimes (less than half the time)   |
+|   1    | Rarely (never or once in a great while) |
+
+### 1.1. Preparation
+
+Group member:
+
+- Prepared for group meetings and presentations;
+- Spent time becoming familiar with the material relevant for the project;
+- Understands the project's goal and expectations;
+- Does what they say they will do on time; and,
+- Attends and is on time to group meetings and presentations.
+
+| Group member name | Preparation rating (1, 2, 3, or 4) |
+| ----------------- | ---------------------------------- |
+|    Yukun Edward Zhang               |               4                     |
+|    Luke Yang               |                4                    |
+|    Althrun Sun               |                4                    |
+|    Lisa Sequeira              |                4                    |
+
+### 1.2. Participation & communication
+
+Group member:
+
+- Articulated ideas effectively when speaking or writing;
+- Produced work that was without signifiant grammatical, formatting, or content errors;
+- Listens to others; and,
+- Encourages others to talk.
+
+| Group member name | Participation & communication rating (1, 2, 3, or 4) |
+| ----------------- | ---------------------------------------------------- |
+|    Yukun Edward Zhang               |               4                     |
+|    Luke Yang               |                4                    |
+|    Althrun Sun               |                4                    |
+|    Lisa Sequeira              |                4                    |
+
+### 1.3. Helps group excel
+
+Group member:
+
+- Expressed great interest in group success by evaluating ideas and suggestions;
+- Initiated problem solving;
+- Influenced and encouraged others to set up high standards;
+- Didn't accept just any idea but looks for the best ideas; and,
+- Stayed motivated from beginning to end of project.
+
+| Group member name | Helps group excel rating (1, 2, 3, or 4) |
+| ----------------- | ---------------------------------------- |
+|    Yukun Edward Zhang               |               4                     |
+|    Luke Yang               |                4                    |
+|    Althrun Sun               |                4                    |
+|    Lisa Sequeira              |                4                    |
+
+### 1.4. Team player (cooperation)
+
+Group member:
+
+- Knew when to be a leader and a follower;
+- Kept an open mind;
+- Compromises when appropriate;
+- Could take criticism; and,
+- Respected others.
+
+| Group member name | Team player (cooperation) rating (1, 2, 3, or 4) |
+| ----------------- | ------------------------------------------------ |
+|    Yukun Edward Zhang               |               4                     |
+|    Luke Yang               |                4                    |
+|    Althrun Sun               |                4                    |
+|    Lisa Sequeira              |                4                    |
+
+## 2. Specific teamwork evaluation
+
+Below, briefly describe the specific contribution(s) each team member (**including yourself**) made to your project. This is an opportunity to expand on the score you gave above, or discuss anything else you believe is relevent to your reflection/evaluation. Specifically, you could comment on the following areas:
+
+- What was the member's role in the group? That is, what sort of things did they to contribute to the evolution of the project?
+- What did the member do well throughout the team project experience?
+- What did the member do poorly throughout the team project experience?
+- Did the member contribute equally and signficantly to the project?
+
+Point form is fine.
+
+### Luke Yang
+
+Luke is awesome and helps to draft the entire make pipeline. He also helps with the data pre-processing, fine-tuning different LLMs for NER, creating class and updating final readme for the project. Each of us review and test the code and the deliverable products. 
+
+### Lisa Sequeira
+
+Luke is a true leader and helps to maintain our Agile project management flow. She also helps with the data pre-processing, fine-tuning different LLMs for NER, post-processing, building similarity search and updating product knowledge graph and final readme for the project. Each of us review and test the code and the deliverable products. 
+
+### Althrun Sun
+
+Sun is a cool engineer and helps to build the foundation for our product knowledge graph dashboard and database. He also helps with the data pre-processing, fine-tuning different LLMs for NER, post-processing, updating similarity search and building product knowledge graph and final readme for the project. Each of us review and test the code and the deliverable products. 
+
+### Yukun Edward Zhang
+
+I helped to build the foundation for NER modeling, scoring metrics and post processing. Moreover, I helped with the data pre-processing, fine-tuning different LLMs for NER, updating similarity search and improving product knowledge graph and final readme for the project. Each of us review and test the code and the deliverable products.
+
+## 3. Partner evaluation
+
+Below, briefly describe your experience working with your specific capstone partner:
+
+- Did you enjoy working with your partner and did they treat you respectfully?
+- Was the partner engaged and supportive?
+ 
+Yes, our partner Prateek Jain from Cymax Technology is very helpful and supportive. We worked very well during weekly meetings and he was surprised by our final product deliverables. We learned a lot from him and his team and hope to maintain the long term realtions with him and Cymax in the future. 

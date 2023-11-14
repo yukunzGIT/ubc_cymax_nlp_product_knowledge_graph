@@ -1,0 +1,1 @@
+from src.entity_recognizer.entity_recognizer import EntityRecognizer
