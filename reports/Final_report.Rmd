@@ -1,6 +1,6 @@
 ---
 title: "Product Knowledge Graph at Cymax - Final Report"
-author: "Lisa Sequeira, Althrun Sun, Luke Yang, Edward Zhang"
+author: "Lisa Sequeira, Althrun Sun, Luke Yang, Yukun (Edward) Zhang"
 date: "2023-06-28"
 output:
   html_document: default
@@ -40,7 +40,7 @@ This project was structured into three sequential milestones, each contributing 
 Our goal is to extract meaningful attributes from product descriptions by excluding marketing phrases such as “timeless elegance” in order to facilitate the discovery of similar products. Meanwhile, we want to retain the semantic meaning of relevant attributes. Therefore, off-the-shelf models  like BERT SentenceTransformer, bag-of-words, or word2vec were not suitable on the entire text columns. From Walmart's product knowledge graph article [@Deivasigamani2020], we decided to leverage their methodology to extract these attributes to find product-entity relationships and use the custom Named-entity Recognition (NER) for entity extraction.
 
 
-To address the custom NER task, we performed fine-tuning on the pre-trained BERT language model. In collaboration with our partner, we identified seven specific entities of interest: 'Color', 'Type', 'Additional Material', 'Appearance', 'Style', 'Feature', and 'Notice'. Since the raw dataset contains 258 unique product subcategories and 72 different general product types, one challenge is to have large enough sample size to cover most of the diverse product types.Therefore, we chose to have two annotators manually label 200 randomly selected product descriptions for these entities, following our [NER guideline](https://bitbucket.org/cymaxdev/ubc_capstone_productknowledgegraph/src/master/docs/NER_annotation_guideline.docx). The following image shows one example of  manual annotation:
+To address the custom NER task, we performed fine-tuning on the pre-trained BERT language model. In collaboration with our partner, we identified seven specific entities of interest: 'Color', 'Type', 'Additional Material', 'Appearance', 'Style', 'Feature', and 'Notice'. Since the raw dataset contains 258 unique product subcategories and 72 different general product types, one challenge is to have large enough sample size to cover most of the diverse product types.Therefore, we chose to have two annotators manually label 200 randomly selected product descriptions for these entities, following our [NER guideline](https://github.com/yukunzGIT/ubc_cymax_nlp_product_knowledge_graph/blob/main/docs/NER_annotation_guideline.docx). The following image shows one example of  manual annotation:
 
 
 ```{r figure_1, echo=FALSE, fig.align='center', out.width = '100%', fig.cap="Manual Annotation of Named Entities"}
@@ -185,7 +185,7 @@ knitr::include_graphics("figures/PKG_dashboard_product_product.png")
 
 2. High-performance Product Graph Database
 
-To achieve high performance graph data retrieval and data manipulation, we use the [Neo4j graph database] (https://neo4j.com/download-neo4j-now/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfUSwHvvpGl0EVsiiVI-eSWpjWLkmRdix4OTAw8eXeHZkKrOxgjzycaApuGEALw_wcB) (code provided in repository), which has the advantages of high performance, scalability and can be used for data retrieval through the built-in Cypher query language. The figure 5 below shows a querying example of our product knowledge graph in Neo4j database.
+To achieve high performance graph data retrieval and data manipulation, we use the [Neo4j graph database](https://neo4j.com/download-neo4j-now/?gclid=Cj0KCQjwtO-kBhDIARIsAL6LorfUSwHvvpGl0EVsiiVI-eSWpjWLkmRdix4OTAw8eXeHZkKrOxgjzycaApuGEALw_wcB) (code provided in repository), which has the advantages of high performance, scalability and can be used for data retrieval through the built-in Cypher query language. The figure 5 below shows a querying example of our product knowledge graph in Neo4j database.
 
 
 ```{r figure_5, echo=FALSE, fig.align='center', out.width = '100%', fig.cap="PKG Neo4j database"}
