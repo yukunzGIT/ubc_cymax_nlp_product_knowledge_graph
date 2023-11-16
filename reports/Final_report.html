@@ -258,6 +258,7 @@ if (window.hljs) {
 div.csl-bib-body { }
 div.csl-entry {
 clear: both;
+margin-bottom: 1em;
 }
 .hanging div.csl-entry {
 margin-left:2em;
@@ -440,7 +441,7 @@ in order to facilitate the discovery of similar products. Meanwhile, we
 want to retain the semantic meaning of relevant attributes. Therefore,
 off-the-shelf models like BERT SentenceTransformer, bag-of-words, or
 word2vec were not suitable on the entire text columns. From Walmart’s
-product knowledge graph article <span class="citation">(Deivasigamani
+product knowledge graph article <span class="citation">(Deivasigamani,
 2020)</span>, we decided to leverage their methodology to extract these
 attributes to find product-entity relationships and use the custom
 Named-entity Recognition (NER) for entity extraction.</p>
@@ -465,9 +466,9 @@ Manual Annotation of Named Entities
 annotators, we employed the Inter-annotator Agreement (IAA) metric to
 measure tagging variability. Existing IAA metrics like Cohen kappa or
 Fleiss’ kappa score are based on two tags only and cannot be directly
-used. So we modified the cohen_kappa_score in scikit-learn <span class="citation">(Pedregosa et al. 2011)</span> for multiple tags and
-annotators and created a new IAA score metric. The IAA score was 85.5%,
-which demonstrates a high level of agreement.</p>
+used. So we modified the cohen_kappa_score in scikit-learn <span class="citation">(Pedregosa ve diğerleri, 2011)</span> for multiple tags
+and annotators and created a new IAA score metric. The IAA score was
+85.5%, which demonstrates a high level of agreement.</p>
 <p>Once the annotation task is completed, we explore the modeling
 process. Since there are no pre-existing models for Cymax’s case and
 building a new model from scratch is time-consuming with limited
@@ -499,7 +500,7 @@ furniture items.</p>
 advisable to regularly assess the IAA. If they have multiple annotators,
 they can perform a pairwise IAA based on our metric.</p>
 <p>We evaluate our NER model performance using the metrics proposed in
-Message Understanding Conference 5 (MUC-5) <span class="citation">(Chinchor and Sundheim 1993)</span>. Here an entity
+Message Understanding Conference 5 (MUC-5) <span class="citation">(Chinchor ve Sundheim, 1993)</span>. Here an entity
 tagged is marked as correct when it is able to assign the right tag to
 an entity, and if it finds the correct starting and ending entity
 boundaries. Based on the F1 score with exact match, the results for our
@@ -564,7 +565,7 @@ for their specific data and extract product entities accordingly.</p>
 <ul>
 <li>annotate more examples and make the training set more diverse to
 include more product categories.</li>
-<li>fine-tune other large language models such as T5 <span class="citation">(Raffel et al. 2020)</span>.</li>
+<li>fine-tune other large language models such as T5 <span class="citation">(Raffel ve diğerleri, 2020)</span>.</li>
 </ul>
 </div>
 </div>
@@ -604,7 +605,7 @@ embeddings. First we took the extracted entities and conducted some post
 processing by removing duplicates and special characters, applying
 lemmatization, and finally turning them into sentences to convert them
 into embeddings using BERT. For assessing product-product similarity, we
-used Spotify’s Approximate Nearest Neighbor model ANNOY <span class="citation">(Bernhardsson 2017)</span>. We selected ANNOY for its
+used Spotify’s Approximate Nearest Neighbor model ANNOY <span class="citation">(Bernhardsson, 2017)</span>. We selected ANNOY for its
 ease of implementation and because it is open-source.</p>
 <p>We generated three models, a control, experimental model 1 and 2. The
 control model data pipeline consisted of using the sentence embeddings
@@ -648,11 +649,11 @@ products.</p>
 <h3>Future work and recommendations</h3>
 <p>Future work in this space would be to make use of the multitude of
 potential similarity models that exist, including other approximate
-nearest neighbors models <span class="citation">(Aumüller, Bernhardsson,
-and Faithfull 2018)</span>. In particular, it would be important to take
+nearest neighbors models <span class="citation">(Aumüller, Bernhardsson
+ve Faithfull, 2018)</span>. In particular, it would be important to take
 into account the inherent hierarchical structure of product inventory
 management and how categories and subcategories could impact
-product-product matching, by making use of Pointcare Embeddings <span class="citation">(Nickel and Kiela 2017)</span>. This work requires more
+product-product matching, by making use of Pointcare Embeddings <span class="citation">(Nickel ve Kiela, 2017)</span>. This work requires more
 domain expertise and a clearer understanding of the product structure.
 In addition, we could repeat this exercise using other data Cymax has
 available and check the performance of product-product similarity when
@@ -749,7 +750,7 @@ system</li>
 <li>perform data migration and data governance on Azure</li>
 <li>leverage multimodel learning by combining with image data.</li>
 <li>build recommender systems with the latest graph neural networks
-(GNN) <span class="citation">(DeBlois-Beaucage 2021)</span></li>
+(GNN) <span class="citation">(DeBlois-Beaucage, 2021)</span></li>
 </ul>
 </div>
 </div>
@@ -770,48 +771,53 @@ enhance their search and recommendation algorithms.</p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2 class="unnumbered">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="1" line-spacing="2">
 <div id="ref-aumuller2018annbenchmarks" class="csl-entry">
-Aumüller, Martin, Erik Bernhardsson, and Alexander Faithfull. 2018.
-<span>“ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest
-Neighbor Algorithms.”</span> <a href="https://arxiv.org/abs/1807.05614">https://arxiv.org/abs/1807.05614</a>.
+Aumüller, M., Bernhardsson, E. ve Faithfull, A. (2018). ANN-Benchmarks:
+A Benchmarking Tool for Approximate Nearest Neighbor Algorithms. <a href="https://arxiv.org/abs/1807.05614">https://arxiv.org/abs/1807.05614</a>
+adresinden erişildi.
 </div>
 <div id="ref-ANNOY" class="csl-entry">
-Bernhardsson, Erik. 2017. <span>“<span>ANNOY Spotify
-Repository</span>.”</span> GitHub repository. <a href="https://github.com/spotify/annoy">https://github.com/spotify/annoy</a>.
+Bernhardsson, E. (2017). <span>ANNOY Spotify Repository</span>. GitHub
+repository. <a href="https://github.com/spotify/annoy">https://github.com/spotify/annoy</a>
+adresinden erişildi.
 </div>
 <div id="ref-chinchor-sundheim-1993-muc" class="csl-entry">
-Chinchor, Nancy, and Beth Sundheim. 1993. <span>“<span>MUC</span>-5
-Evaluation Metrics.”</span> In <em>Fifth Message Understanding
-Conference (<span>MUC</span>-5): Proceedings of a Conference Held in
-Baltimore, <span>M</span>aryland, August 25-27, 1993</em>. <a href="https://aclanthology.org/M93-1007">https://aclanthology.org/M93-1007</a>.
+Chinchor, N. ve Sundheim, B. (1993). <span>MUC</span>-5 Evaluation
+Metrics. <em>Fifth Message Understanding Conference
+(<span>MUC</span>-5): Proceedings of a Conference Held in Baltimore,
+<span>M</span>aryland, August 25-27, 1993</em> içinde. <a href="https://aclanthology.org/M93-1007">https://aclanthology.org/M93-1007</a>
+adresinden erişildi.
 </div>
 <div id="ref-GNN" class="csl-entry">
-DeBlois-Beaucage, Jérémi. 2021. <span>“Building a Recommender System
-Using Graph Neural Networks.”</span> Medium. <a href="https://medium.com/decathlondigital/building-a-recommender-system-using-graph-neural-networks-2ee5fc4e706d">https://medium.com/decathlondigital/building-a-recommender-system-using-graph-neural-networks-2ee5fc4e706d</a>.
+DeBlois-Beaucage, J. (2021). Building a Recommender System Using Graph
+Neural Networks. Medium. <a href="https://medium.com/decathlondigital/building-a-recommender-system-using-graph-neural-networks-2ee5fc4e706d">https://medium.com/decathlondigital/building-a-recommender-system-using-graph-neural-networks-2ee5fc4e706d</a>
+adresinden erişildi.
 </div>
 <div id="ref-Deivasigamani2020" class="csl-entry">
-Deivasigamani, Karthik. 2020. <span>“Retail Graph — Walmart’s Product
-Knowledge Graph.”</span> Medium. <a href="https://medium.com/walmartglobaltech/retail-graph-walmarts-product-knowledge-graph-6ef7357963bc">https://medium.com/walmartglobaltech/retail-graph-walmarts-product-knowledge-graph-6ef7357963bc</a>.
+Deivasigamani, K. (2020). Retail Graph — Walmart’s Product Knowledge
+Graph. Medium. <a href="https://medium.com/walmartglobaltech/retail-graph-walmarts-product-knowledge-graph-6ef7357963bc">https://medium.com/walmartglobaltech/retail-graph-walmarts-product-knowledge-graph-6ef7357963bc</a>
+adresinden erişildi.
 </div>
 <div id="ref-NIPS2017_59dfa2df" class="csl-entry">
-Nickel, Maximillian, and Douwe Kiela. 2017. <span>“Poincaré Embeddings
-for Learning Hierarchical Representations.”</span> In <em>Advances in
-Neural Information Processing Systems</em>, edited by I. Guyon, U. Von
-Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan, and R.
-Garnett. Vol. 30. Curran Associates, Inc. <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/59dfa2df42d9e3d41f5b02bfc32229dd-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2017/file/59dfa2df42d9e3d41f5b02bfc32229dd-Paper.pdf</a>.
+Nickel, M. ve Kiela, D. (2017). Poincaré Embeddings for Learning
+Hierarchical Representations. I. Guyon, U. V. Luxburg, S. Bengio, H.
+Wallach, R. Fergus, S. Vishwanathan ve R. Garnett (Ed.), <em>Advances in
+Neural Information Processing Systems</em> içinde (C. 30). Curran
+Associates, Inc. <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/59dfa2df42d9e3d41f5b02bfc32229dd-Paper.pdf">https://proceedings.neurips.cc/paper_files/paper/2017/file/59dfa2df42d9e3d41f5b02bfc32229dd-Paper.pdf</a>
+adresinden erişildi.
 </div>
 <div id="ref-scikit-learn" class="csl-entry">
-Pedregosa, F., G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O.
-Grisel, M. Blondel, et al. 2011. <span>“Scikit-Learn: Machine Learning
-in <span>P</span>ython.”</span> <em>Journal of Machine Learning
-Research</em> 12: 2825–30.
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B.,
+Grisel, O., … Duchesnay, E. (2011). Scikit-learn: Machine Learning in
+<span>P</span>ython. <em>Journal of Machine Learning Research</em>,
+<em>12</em>, 2825-2830.
 </div>
 <div id="ref-t5" class="csl-entry">
-Raffel, Colin, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang,
-Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. 2020.
-<span>“Exploring the Limits of Transfer Learning with a Unified
-Text-to-Text Transformer.”</span> <a href="https://arxiv.org/abs/1910.10683">https://arxiv.org/abs/1910.10683</a>.
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., …
+Liu, P. J. (2020). Exploring the Limits of Transfer Learning with a
+Unified Text-to-Text Transformer. <a href="https://arxiv.org/abs/1910.10683">https://arxiv.org/abs/1910.10683</a>
+adresinden erişildi.
 </div>
 </div>
 </div>
