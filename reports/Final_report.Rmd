@@ -3,8 +3,10 @@ title: "Product Knowledge Graph at Cymax - Final Report"
 author: "Lisa Sequeira, Althrun Sun, Luke Yang, Yukun (Edward) Zhang"
 date: "2023-06-28"
 output:
-  html_document: default
-  pdf_document: default
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
 csl: apa-tr.csl
 bibliography: final_report_refs.bib
 ---
