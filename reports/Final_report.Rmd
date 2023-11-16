@@ -3,9 +3,9 @@ title: "Product Knowledge Graph at Cymax - Final Report"
 author: "Lisa Sequeira, Althrun Sun, Luke Yang, Yukun (Edward) Zhang"
 date: "2023-06-28"
 output:
-  pdf_document:
-    toc: yes
   html_document:
+    toc: yes
+  pdf_document:
     toc: yes
 csl: apa-tr.csl
 bibliography: final_report_refs.bib
@@ -105,7 +105,7 @@ With the best model, Cymax can directly apply it to new furniture products from 
 -   fine-tune other large language models such as T5 [@t5].
 
 
-## Milestone 2: Product-Product Similarity
+## Milestone 2 - Product-Product Similarity
 
 
 ### Data Product
